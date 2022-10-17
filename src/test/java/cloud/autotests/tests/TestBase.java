@@ -5,6 +5,7 @@ import cloud.autotests.config.demowebshop.App;
 import cloud.autotests.helpers.AllureAttachments;
 import cloud.autotests.helpers.DriverSettings;
 import cloud.autotests.helpers.DriverUtils;
+import cloud.autotests.tests.data.TestData;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -46,4 +47,14 @@ public class TestBase {
             AllureAttachments.addVideo(sessionId);
         }
     }
+
+    TestData testData = new TestData();
+
+    String password = testData.getPassword();
+    String firstName = testData.getFirstName();
+    String lastName = testData.getLastName();
+    String email = testData.getEmail();
+    String anotherEmail = testData.getAnotherEmail();
+    String anotherName = testData.getAnotherName();
+    String anotherLastName = testData.getAnotherLastName();
 }

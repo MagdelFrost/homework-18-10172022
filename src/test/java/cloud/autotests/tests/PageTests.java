@@ -2,9 +2,7 @@ package cloud.autotests.tests;
 
 import cloud.autotests.tests.components.User;
 import com.codeborne.selenide.WebDriverRunner;
-import com.github.javafaker.Faker;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Cookie;
@@ -15,33 +13,13 @@ import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class PageUITests extends TestBase {
+public class PageTests extends TestBase {
 
     private final String authCookieName = "NOPCOMMERCE.AUTH";
     private final String verificationTokenName = "__RequestVerificationToken";
     private final String verificationTokenInputValue = "10QcxkN4-Gk5PEeZlTrtVTuN7xtnRi_RY4ssN4Kd1kn--wsjFIdx3MtZG3cs6EsIYcWSCd3dIikpNcaAeVkJyMaRx50q_u84GfmcWQFqcqw1";
     private final String verificationTokenHeaderValue = "at9THwDl4iOCtU40qL9aL87W4x6vnP7C7vDFXJ6VVruf0QlYjJGo4vKOOZ37as2KBsbYUCMAENIXnFqvW6QHp-85oL4JZadn5TQu5MPCDv41;";
-    Faker faker = new Faker();
     User user = new User();
-    private String password;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String anotherEmail;
-    private String anotherName;
-    private String anotherLastName;
-
-
-    @BeforeEach
-    void setUpUser() {
-        password = faker.numerify("##########");
-        firstName = faker.name().firstName();
-        lastName = faker.name().lastName();
-        email = faker.internet().emailAddress();
-        anotherEmail = faker.internet().emailAddress();
-        anotherName = faker.name().firstName();
-        anotherLastName = faker.name().lastName();
-    }
 
     @AfterEach
     public void clearBrowser() {
@@ -110,9 +88,6 @@ public class PageUITests extends TestBase {
     @Test
     @DisplayName("Редактирование профиля через UI")
     void userCanModifyProfileTest() {
-        String anotherEmail = faker.internet().emailAddress();
-        String anotherName = faker.name().firstName();
-        String anotherLastName = faker.name().lastName();
 
         step("Открываем страницу регистрации пользователя", () -> {
             open("/register");

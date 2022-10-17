@@ -17,8 +17,8 @@ public class PageTests extends TestBase {
 
     private final String authCookieName = "NOPCOMMERCE.AUTH";
     private final String verificationTokenName = "__RequestVerificationToken";
-    private final String verificationTokenInputValue = "10QcxkN4-Gk5PEeZlTrtVTuN7xtnRi_RY4ssN4Kd1kn--wsjFIdx3MtZG3cs6EsIYcWSCd3dIikpNcaAeVkJyMaRx50q_u84GfmcWQFqcqw1";
-    private final String verificationTokenHeaderValue = "at9THwDl4iOCtU40qL9aL87W4x6vnP7C7vDFXJ6VVruf0QlYjJGo4vKOOZ37as2KBsbYUCMAENIXnFqvW6QHp-85oL4JZadn5TQu5MPCDv41;";
+    private final String verificationTokenInputValue = "XapUk5SPaJmG9pDlZ1tlf1snRyim7nc9PmXtFHt0VwTC0VmNQe_NhKcGZLR9Y6dUqtm-I0kkmOwEnS78l1cOa61GqXN9aVsqhOPYZue-j2Y1";
+    private final String verificationTokenHeaderValue = "gu-OZ7vGMA98nzVPYmU8mhYs98kYSlT5afnyeYDjxWGRyWR9BqFEqGLNzaghEnn5-8ge-M93B--xbfx4JMTH3nmQ4I1GdH5JtXDvAEc0YBU1";
     User user = new User();
 
     @AfterEach

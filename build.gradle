@@ -72,8 +72,12 @@ tasks.withType(Test) {
     }
 }
 
-task demowebshop(type: Test) {
-    useJUnitPlatform {
-        includeTags 'demowebshop'
-    }
+task localTest(type: Test) {
+    systemProperties += ["env" : "local"]
+    useJUnitPlatform {}
+}
+
+task remoteTest(type: Test) {
+    systemProperties += ["env" : "remote"]
+    useJUnitPlatform {}
 }

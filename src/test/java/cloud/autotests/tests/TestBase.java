@@ -1,6 +1,7 @@
 package cloud.autotests.tests;
 
 import cloud.autotests.config.Project;
+import cloud.autotests.config.ProjectConfig;
 import cloud.autotests.config.demowebshop.App;
 import cloud.autotests.helpers.AllureAttachments;
 import cloud.autotests.helpers.DriverSettings;
@@ -38,7 +39,6 @@ public class TestBase {
 
         AllureAttachments.addScreenshotAs("Last screenshot");
         AllureAttachments.addPageSource();
-//        AllureAttachments.attachNetwork(); // todo
         AllureAttachments.addBrowserConsoleLogs();
 
         Selenide.closeWebDriver();
